@@ -9,5 +9,10 @@ The notebook will save reproducible experimental outputs here, including:
 - Correct and incorrect prediction examples
 - Machine-readable metrics
 
-No numerical results have been generated yet.
+Model-training and evaluation results have not been generated yet.
+
+## Dataset Exploration Outputs
+
+- `lfw_identity_distribution.png` shows the 15 most represented identities in the complete dataset.
+- `lfw_sample_faces.png` shows one deterministic sample from each of the 10 most represented identities.
 

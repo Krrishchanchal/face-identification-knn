@@ -108,6 +108,23 @@ The initial experiment uses:
 
 The test set remains untouched until model selection is complete. This provides a more reliable estimate of performance on unseen images of the five known people.
 
+## Dataset Exploration
+
+The complete LFW dataset used by the notebook contains:
+
+- 13,233 face images
+- 5,749 identities
+- 62 x 47 grayscale pixels per image
+- 2,914 flattened pixel features per image
+- 12 identities with at least 50 images
+- 4,069 identities represented by only one image
+
+The strong class imbalance motivates selecting sufficiently represented identities and sampling an equal number of images from each person.
+
+![LFW identity distribution](results/lfw_identity_distribution.png)
+
+![Representative LFW faces](results/lfw_sample_faces.png)
+
 ## Evaluation
 
 The system will be evaluated using:
@@ -119,7 +136,7 @@ The system will be evaluated using:
 - Correct and incorrect prediction examples
 - Visual analysis of frequently confused identities
 
-Final metrics and generated figures will be added after the complete experiment has been run.
+Model metrics and evaluation figures will be added after the complete experiment has been run.
 
 ## Limitations
 
