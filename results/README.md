@@ -25,3 +25,8 @@ Model-training and evaluation results have not been generated yet.
 
 - `train_test_distribution.png` verifies the stratified 80:20 split: every identity contributes 40 training images and 10 held-out testing images.
 
+## PCA and Eigenface Outputs
+
+- `pca_explained_variance.png` shows how cumulative training-set variance increases across the first 100 PCA components; together they retain 95.92%.
+- `eigenfaces.png` visualises the first 15 principal components reshaped to the original 62 x 47 image dimensions.
+

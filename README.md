@@ -66,7 +66,9 @@ The planned workflow is:
 |   |-- lfw_sample_faces.png
 |   |-- balanced_identity_distribution.png
 |   |-- balanced_sample_faces.png
-|   `-- train_test_distribution.png
+|   |-- train_test_distribution.png
+|   |-- pca_explained_variance.png
+|   `-- eigenfaces.png
 `-- src/
     `-- README.md
 ```
@@ -152,6 +154,18 @@ The balanced subset is divided using an 80:20 stratified split with random seed 
 ![Stratified training and testing distribution](results/train_test_distribution.png)
 
 The test set will remain untouched while PCA and k-NN parameters are selected. PCA must be fitted only on the training data so information from the test images cannot influence the learned Eigenface representation.
+
+### PCA and Eigenfaces
+
+An exploratory PCA transformer is fitted exclusively on the 200 training images. It reduces each face from 2,914 pixel values to 100 whitened PCA coefficients and retains 95.92% of the variance present in the training data. The 50 test images are projected using the training mean and components without influencing the fitted representation.
+
+![Cumulative PCA explained variance](results/pca_explained_variance.png)
+
+The leading Eigenfaces visualise the strongest directions of variation learned from the training faces. They capture recurring contrasts associated with facial structure, pose, illumination, and background rather than representing individual people.
+
+![Leading Eigenfaces](results/eigenfaces.png)
+
+The 100-component setting is exploratory. The final PCA component count will be selected together with the k-NN parameters using cross-validation confined to the training set.
 
 ## Evaluation
 
