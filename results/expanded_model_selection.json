@@ -1,0 +1,13 @@
+{
+  "training_images": 435,
+  "test_images_used_during_selection": 0,
+  "cross_validation_folds": 5,
+  "candidate_configurations": 96,
+  "best_mean_validation_accuracy": 0.6114942528735632,
+  "best_validation_accuracy_std": 0.0380527479476939,
+  "selected_parameters": {
+    "pca__n_components": 40,
+    "knn__n_neighbors": 15,
+    "knn__weights": "distance"
+  }
+}

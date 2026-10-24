@@ -79,7 +79,10 @@ The planned workflow is:
 |   |-- sample_predictions.png
 |   |-- expanded_dataset_manifest.csv
 |   |-- expanded_dataset_summary.csv
-|   `-- expanded_split_distribution.png
+|   |-- expanded_split_distribution.png
+|   |-- expanded_cross_validation_results.csv
+|   |-- expanded_model_selection.json
+|   `-- expanded_parameter_selection.png
 `-- src/
     `-- README.md
 ```
@@ -230,6 +233,19 @@ The expansion is treated as a new experiment, not as a modification made to hide
 The manifest records the original LFW source index, identity, split, and whether each image came from the pilot or the newly sampled pool. Automated checks confirm 545 unique images, zero expanded train-test overlap, and zero overlap between the 110 fresh final-test images and all 250 pilot images.
 
 ![Expanded training and fresh-test distribution](results/expanded_split_distribution.png)
+
+### Expanded Training-Only Model Selection
+
+Five-fold stratified cross-validation evaluates 96 configurations using only the 435 expanded training images:
+
+- PCA components: 40, 60, 80, 100, 120, and 150
+- Neighbours (`k`): 1, 3, 5, 7, 9, 11, 13, and 15
+- Voting: uniform and distance-weighted
+- Distance metric: Euclidean
+
+PCA is refitted independently inside every fold. The selected configuration uses 40 PCA components, `k=15`, and distance-weighted voting, achieving **61.15% mean validation accuracy** with a standard deviation of **3.81 percentage points**. The winning pipeline is refitted on all 435 training images. No image from the 110-image fresh test set is used during this selection process.
+
+![Expanded PCA and k-NN parameter selection](results/expanded_parameter_selection.png)
 
 ## Limitations
 

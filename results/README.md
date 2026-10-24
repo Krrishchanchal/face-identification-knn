@@ -50,3 +50,9 @@ The directory currently contains the dataset analysis, model-selection results, 
 - `expanded_dataset_summary.csv` records the transition from 50 pilot images to 87 training and 22 fresh test images per identity.
 - `expanded_split_distribution.png` verifies the balanced 435-image training set and 110-image fresh final test set.
 
+## Expanded Model-Selection Outputs
+
+- `expanded_cross_validation_results.csv` records mean accuracy, standard deviation, and rank for all 96 expanded-training configurations.
+- `expanded_model_selection.json` records the selected parameters, 61.15% mean validation accuracy, 3.81 percentage-point standard deviation, and confirmation that zero test images were used during selection.
+- `expanded_parameter_selection.png` compares the five-fold validation accuracy across six PCA dimensions, eight neighbour counts, and two voting methods. The selected configuration uses 40 components, `k=15`, and distance weighting.
+
