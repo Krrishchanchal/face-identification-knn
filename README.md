@@ -59,14 +59,15 @@ The planned workflow is:
 |-- .gitignore
 |-- face_identification.ipynb
 |-- report/
-|   `-- final_report.pdf
+|   `-- README.md
 |-- results/
-|   |-- confusion_matrix.png
-|   |-- eigenfaces.png
-|   |-- parameter_selection.png
-|   `-- sample_predictions.png
+|   |-- README.md
+|   |-- lfw_identity_distribution.png
+|   |-- lfw_sample_faces.png
+|   |-- balanced_identity_distribution.png
+|   `-- balanced_sample_faces.png
 `-- src/
-    `-- face_identification.py
+    `-- README.md
 ```
 
 The notebook will contain the complete exploratory and experimental workflow. Reusable functions may also be placed in `src/` as the implementation develops.
@@ -124,6 +125,24 @@ The strong class imbalance motivates selecting sufficiently represented identiti
 ![LFW identity distribution](results/lfw_identity_distribution.png)
 
 ![Representative LFW faces](results/lfw_sample_faces.png)
+
+### Balanced Working Dataset
+
+The five identities with the largest number of available images are selected by a documented rule rather than by manual preference. The notebook then samples 50 unique images from each identity without replacement, using random seed `42` for reproducibility.
+
+| Identity | Images available | Images selected |
+|---|---:|---:|
+| George W. Bush | 530 | 50 |
+| Colin Powell | 236 | 50 |
+| Tony Blair | 144 | 50 |
+| Donald Rumsfeld | 121 | 50 |
+| Gerhard Schroeder | 109 | 50 |
+
+This produces a balanced working dataset of 250 images. Balancing prevents identities with more photographs in LFW from having greater influence solely because of their class size.
+
+![Balanced five-identity distribution](results/balanced_identity_distribution.png)
+
+![Samples from the balanced dataset](results/balanced_sample_faces.png)
 
 ## Evaluation
 

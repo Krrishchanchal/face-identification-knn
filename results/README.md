@@ -16,3 +16,8 @@ Model-training and evaluation results have not been generated yet.
 - `lfw_identity_distribution.png` shows the 15 most represented identities in the complete dataset.
 - `lfw_sample_faces.png` shows one deterministic sample from each of the 10 most represented identities.
 
+## Balanced Dataset Outputs
+
+- `balanced_identity_distribution.png` verifies that all five selected identities contain exactly 50 images.
+- `balanced_sample_faces.png` shows five reproducibly sampled faces from each selected identity, illustrating variations in pose, expression, and illumination.
+
