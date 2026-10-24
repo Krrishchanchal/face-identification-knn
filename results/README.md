@@ -30,3 +30,8 @@ Model-training and evaluation results have not been generated yet.
 - `pca_explained_variance.png` shows how cumulative training-set variance increases across the first 100 PCA components; together they retain 95.92%.
 - `eigenfaces.png` visualises the first 15 principal components reshaped to the original 62 x 47 image dimensions.
 
+## Model-Selection Outputs
+
+- `cross_validation_results.csv` records the mean accuracy, accuracy standard deviation, and rank for all 50 PCA and k-NN parameter combinations.
+- `parameter_selection.png` compares five-fold validation accuracy across PCA dimensions, neighbour counts, and voting methods. The selected configuration uses 40 components, `k=9`, and distance weighting, with 60.50% mean validation accuracy.
+

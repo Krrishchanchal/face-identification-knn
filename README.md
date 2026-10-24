@@ -68,7 +68,9 @@ The planned workflow is:
 |   |-- balanced_sample_faces.png
 |   |-- train_test_distribution.png
 |   |-- pca_explained_variance.png
-|   `-- eigenfaces.png
+|   |-- eigenfaces.png
+|   |-- cross_validation_results.csv
+|   `-- parameter_selection.png
 `-- src/
     `-- README.md
 ```
@@ -166,6 +168,21 @@ The leading Eigenfaces visualise the strongest directions of variation learned f
 ![Leading Eigenfaces](results/eigenfaces.png)
 
 The 100-component setting is exploratory. The final PCA component count will be selected together with the k-NN parameters using cross-validation confined to the training set.
+
+### Training-Only Model Selection
+
+Five-fold stratified cross-validation evaluates 50 PCA and k-NN configurations using only the 200 training images:
+
+- PCA components: 40, 60, 80, 100, and 120
+- Neighbours (`k`): 1, 3, 5, 7, and 9
+- Voting: uniform and distance-weighted
+- Distance metric: Euclidean
+
+PCA is fitted only on the four training folds during each iteration and then applied to the validation fold. The best configuration achieves a mean validation accuracy of **60.50%** using 40 PCA components, `k=9`, and distance-weighted voting. Ties are resolved by preferring lower variation across folds, fewer components, and fewer neighbours.
+
+![PCA and k-NN parameter selection](results/parameter_selection.png)
+
+The winning pipeline is refitted on all 200 training images. The held-out test set remains unused until final evaluation.
 
 ## Evaluation
 
