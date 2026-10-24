@@ -21,3 +21,7 @@ Model-training and evaluation results have not been generated yet.
 - `balanced_identity_distribution.png` verifies that all five selected identities contain exactly 50 images.
 - `balanced_sample_faces.png` shows five reproducibly sampled faces from each selected identity, illustrating variations in pose, expression, and illumination.
 
+## Data-Split Output
+
+- `train_test_distribution.png` verifies the stratified 80:20 split: every identity contributes 40 training images and 10 held-out testing images.
+

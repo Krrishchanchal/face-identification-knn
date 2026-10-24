@@ -65,7 +65,8 @@ The planned workflow is:
 |   |-- lfw_identity_distribution.png
 |   |-- lfw_sample_faces.png
 |   |-- balanced_identity_distribution.png
-|   `-- balanced_sample_faces.png
+|   |-- balanced_sample_faces.png
+|   `-- train_test_distribution.png
 `-- src/
     `-- README.md
 ```
@@ -143,6 +144,14 @@ This produces a balanced working dataset of 250 images. Balancing prevents ident
 ![Balanced five-identity distribution](results/balanced_identity_distribution.png)
 
 ![Samples from the balanced dataset](results/balanced_sample_faces.png)
+
+### Stratified Train-Test Split
+
+The balanced subset is divided using an 80:20 stratified split with random seed `42`. The training set contains 200 images (40 per identity), while the held-out test set contains 50 images (10 per identity). Integrity checks confirm that the two sets contain no overlapping source images and together cover all 250 selected images.
+
+![Stratified training and testing distribution](results/train_test_distribution.png)
+
+The test set will remain untouched while PCA and k-NN parameters are selected. PCA must be fitted only on the training data so information from the test images cannot influence the learned Eigenface representation.
 
 ## Evaluation
 
