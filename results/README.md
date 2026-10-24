@@ -9,7 +9,7 @@ The notebook will save reproducible experimental outputs here, including:
 - Correct and incorrect prediction examples
 - Machine-readable metrics
 
-Model-training and evaluation results have not been generated yet.
+The directory currently contains the dataset analysis, model-selection results, and held-out outputs for the 50-images-per-identity pilot experiment. These files are retained as a transparent baseline while a larger experiment is developed.
 
 ## Dataset Exploration Outputs
 
@@ -34,4 +34,13 @@ Model-training and evaluation results have not been generated yet.
 
 - `cross_validation_results.csv` records the mean accuracy, accuracy standard deviation, and rank for all 50 PCA and k-NN parameter combinations.
 - `parameter_selection.png` compares five-fold validation accuracy across PCA dimensions, neighbour counts, and voting methods. The selected configuration uses 40 components, `k=9`, and distance weighting, with 60.50% mean validation accuracy.
+
+## Pilot Evaluation Outputs
+
+- `final_metrics.json` stores the pilot's 52.00% test accuracy, prediction counts, validation accuracy, and selected parameters. The filename predates the decision to retain this run as a pilot baseline.
+- `classification_report.csv` stores precision, recall, F1-score, and support for each identity.
+- `test_predictions.csv` records the actual identity, predicted identity, confidence, and correctness for every held-out image.
+- `confusion_pairs.csv` ranks directed identity-confusion errors by frequency.
+- `confusion_matrix.png` presents the pilot's complete five-class held-out confusion matrix.
+- `sample_predictions.png` shows six correct and six incorrect held-out predictions with model confidence.
 

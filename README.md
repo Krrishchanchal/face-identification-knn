@@ -70,7 +70,13 @@ The planned workflow is:
 |   |-- pca_explained_variance.png
 |   |-- eigenfaces.png
 |   |-- cross_validation_results.csv
-|   `-- parameter_selection.png
+|   |-- parameter_selection.png
+|   |-- final_metrics.json
+|   |-- classification_report.csv
+|   |-- test_predictions.csv
+|   |-- confusion_pairs.csv
+|   |-- confusion_matrix.png
+|   `-- sample_predictions.png
 `-- src/
     `-- README.md
 ```
@@ -184,18 +190,39 @@ PCA is fitted only on the four training folds during each iteration and then app
 
 The winning pipeline is refitted on all 200 training images. The held-out test set remains unused until final evaluation.
 
-## Evaluation
+## Pilot Evaluation
 
-The system will be evaluated using:
+The first controlled experiment used 50 images per identity and was evaluated once on its 50-image held-out test set. This result is retained as a **pilot baseline**, rather than being replaced after the test score was observed:
 
-- Classification accuracy
-- Precision, recall, and F1-score for each identity
-- Confusion matrix
-- Cross-validation performance
-- Correct and incorrect prediction examples
-- Visual analysis of frequently confused identities
+| Metric | Result |
+|---|---:|
+| Correct predictions | 26 / 50 |
+| Pilot test accuracy | 52.00% |
+| Macro precision | 56.62% |
+| Macro recall | 52.00% |
+| Macro F1-score | 51.27% |
 
-Model metrics and evaluation figures will be added after the complete experiment has been run.
+Per-identity performance is:
+
+| Identity | Precision | Recall | F1-score |
+|---|---:|---:|---:|
+| George W. Bush | 54.55% | 60.00% | 57.14% |
+| Colin Powell | 40.00% | 80.00% | 53.33% |
+| Tony Blair | 60.00% | 30.00% | 40.00% |
+| Donald Rumsfeld | 57.14% | 40.00% | 47.06% |
+| Gerhard Schroeder | 71.43% | 50.00% | 58.82% |
+
+![Pilot test confusion matrix](results/confusion_matrix.png)
+
+The most frequent directed error is Tony Blair predicted as Colin Powell, occurring four times. Colin Powell is predicted 20 times overall despite equal test support for every class. A plausible explanation is that low-resolution grayscale PCA emphasises global pose, illumination, contrast, and head shape while losing colour and fine facial texture. Powell's training samples may cover a broader or more central portion of the Eigenface space, causing ambiguous faces to acquire Powell neighbours. This interpretation is a hypothesis based on the observed error pattern.
+
+![Correct and incorrect test predictions](results/sample_predictions.png)
+
+The pilot test results were not used to retune that experiment. The next experiment will expand the balanced dataset from 50 to 109 images per identity, matching the complete image count of the least represented selected identity. Its final test images will be selected only from images that were never used in this pilot, so the expanded experiment retains a genuinely unseen evaluation set.
+
+### Transition to the Expanded Experiment
+
+The expansion is treated as a new experiment, not as a modification made to hide or overwrite the 52.00% pilot result. For each identity, the 50 pilot images become development data. Of the remaining 59 previously unused images, 37 are added to training and 22 are reserved for a new final test set. The expanded experiment therefore uses 87 training images and 22 fresh test images per identity, for totals of 435 training images and 110 test images.
 
 ## Limitations
 
