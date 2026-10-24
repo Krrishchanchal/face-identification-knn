@@ -76,7 +76,10 @@ The planned workflow is:
 |   |-- test_predictions.csv
 |   |-- confusion_pairs.csv
 |   |-- confusion_matrix.png
-|   `-- sample_predictions.png
+|   |-- sample_predictions.png
+|   |-- expanded_dataset_manifest.csv
+|   |-- expanded_dataset_summary.csv
+|   `-- expanded_split_distribution.png
 `-- src/
     `-- README.md
 ```
@@ -223,6 +226,10 @@ The pilot test results were not used to retune that experiment. The next experim
 ### Transition to the Expanded Experiment
 
 The expansion is treated as a new experiment, not as a modification made to hide or overwrite the 52.00% pilot result. For each identity, the 50 pilot images become development data. Of the remaining 59 previously unused images, 37 are added to training and 22 are reserved for a new final test set. The expanded experiment therefore uses 87 training images and 22 fresh test images per identity, for totals of 435 training images and 110 test images.
+
+The manifest records the original LFW source index, identity, split, and whether each image came from the pilot or the newly sampled pool. Automated checks confirm 545 unique images, zero expanded train-test overlap, and zero overlap between the 110 fresh final-test images and all 250 pilot images.
+
+![Expanded training and fresh-test distribution](results/expanded_split_distribution.png)
 
 ## Limitations
 

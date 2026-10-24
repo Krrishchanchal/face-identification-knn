@@ -44,3 +44,9 @@ The directory currently contains the dataset analysis, model-selection results, 
 - `confusion_matrix.png` presents the pilot's complete five-class held-out confusion matrix.
 - `sample_predictions.png` shows six correct and six incorrect held-out predictions with model confidence.
 
+## Expanded Dataset Outputs
+
+- `expanded_dataset_manifest.csv` records every selected LFW source index, identity, split, and whether the image belonged to the pilot or newly sampled pool.
+- `expanded_dataset_summary.csv` records the transition from 50 pilot images to 87 training and 22 fresh test images per identity.
+- `expanded_split_distribution.png` verifies the balanced 435-image training set and 110-image fresh final test set.
+
