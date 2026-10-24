@@ -56,3 +56,13 @@ The directory currently contains the dataset analysis, model-selection results, 
 - `expanded_model_selection.json` records the selected parameters, 61.15% mean validation accuracy, 3.81 percentage-point standard deviation, and confirmation that zero test images were used during selection.
 - `expanded_parameter_selection.png` compares the five-fold validation accuracy across six PCA dimensions, eight neighbour counts, and two voting methods. The selected configuration uses 40 components, `k=15`, and distance weighting.
 
+## Expanded Final-Evaluation Outputs
+
+- `expanded_final_metrics.json` stores the final 71.82% accuracy, 71.87% macro F1-score, selected parameters, and 19.82 percentage-point change from the pilot.
+- `expanded_classification_report.csv` stores precision, recall, F1-score, and support for each identity on the 110-image fresh test set.
+- `expanded_test_predictions.csv` records source index, actual identity, predicted identity, distance-weighted vote share, and correctness for every fresh test image.
+- `expanded_confusion_pairs.csv` ranks every directed identity-confusion error by frequency.
+- `expanded_confusion_matrix.png` presents the complete five-class final confusion matrix.
+- `expanded_sample_predictions.png` shows diverse correct and incorrect examples across the five identities.
+- `pilot_expanded_accuracy_comparison.png` compares the 52.00% pilot accuracy with the 71.82% expanded final accuracy and the 20% chance baseline.
+

@@ -1,0 +1,17 @@
+{
+  "test_accuracy": 0.7181818181818181,
+  "correct_predictions": 79,
+  "incorrect_predictions": 31,
+  "test_images": 110,
+  "macro_precision": 0.7364106583072101,
+  "macro_recall": 0.7181818181818181,
+  "macro_f1_score": 0.7187205872627868,
+  "cross_validation_accuracy": 0.6114942528735632,
+  "cross_validation_accuracy_std": 0.0380527479476939,
+  "selected_pca_components": 40,
+  "selected_k": 15,
+  "selected_weights": "distance",
+  "pilot_test_accuracy": 0.52,
+  "accuracy_change_from_pilot": 0.19818181818181813,
+  "test_set_was_unused_by_pilot": true
+}

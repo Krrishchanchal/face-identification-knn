@@ -82,7 +82,14 @@ The planned workflow is:
 |   |-- expanded_split_distribution.png
 |   |-- expanded_cross_validation_results.csv
 |   |-- expanded_model_selection.json
-|   `-- expanded_parameter_selection.png
+|   |-- expanded_parameter_selection.png
+|   |-- expanded_final_metrics.json
+|   |-- expanded_classification_report.csv
+|   |-- expanded_test_predictions.csv
+|   |-- expanded_confusion_pairs.csv
+|   |-- expanded_confusion_matrix.png
+|   |-- expanded_sample_predictions.png
+|   `-- pilot_expanded_accuracy_comparison.png
 `-- src/
     `-- README.md
 ```
@@ -246,6 +253,38 @@ Five-fold stratified cross-validation evaluates 96 configurations using only the
 PCA is refitted independently inside every fold. The selected configuration uses 40 PCA components, `k=15`, and distance-weighted voting, achieving **61.15% mean validation accuracy** with a standard deviation of **3.81 percentage points**. The winning pipeline is refitted on all 435 training images. No image from the 110-image fresh test set is used during this selection process.
 
 ![Expanded PCA and k-NN parameter selection](results/expanded_parameter_selection.png)
+
+### Expanded Final Evaluation
+
+After model selection was complete, the frozen expanded model was evaluated once on the 110 fresh test images:
+
+| Metric | Expanded result |
+|---|---:|
+| Correct predictions | 79 / 110 |
+| Final test accuracy | 71.82% |
+| Macro precision | 73.64% |
+| Macro recall | 71.82% |
+| Macro F1-score | 71.87% |
+
+Per-identity performance is:
+
+| Identity | Precision | Recall | F1-score |
+|---|---:|---:|---:|
+| George W. Bush | 70.83% | 77.27% | 73.91% |
+| Colin Powell | 85.00% | 77.27% | 80.95% |
+| Tony Blair | 62.07% | 81.82% | 70.59% |
+| Donald Rumsfeld | 86.67% | 59.09% | 70.27% |
+| Gerhard Schroeder | 63.64% | 63.64% | 63.64% |
+
+![Expanded final confusion matrix](results/expanded_confusion_matrix.png)
+
+The most frequent directed error is Gerhard Schroeder predicted as Tony Blair, occurring six times. Tony Blair is predicted 29 times despite the balanced test support of 22 images per identity, while Donald Rumsfeld is predicted only 15 times. A plausible hypothesis is that the low-resolution grayscale Eigenface representation emphasises global pose, lighting, facial outline, and contrast while discarding fine identity-specific texture. Some Schroeder photographs may consequently lie closer to Blair's training neighbours. Rumsfeld's lower recall and errors across several classes may similarly reflect pose and expression variation. These explanations are hypotheses based on the observed pattern rather than proven causes.
+
+![Expanded correct and incorrect predictions](results/expanded_sample_predictions.png)
+
+The expanded accuracy is 19.82 percentage points higher than the 52.00% pilot baseline. This comparison should be interpreted carefully because the two experiments use different held-out images. The stronger expanded result nevertheless comes from a larger, completely fresh final test set and was not used for parameter tuning.
+
+![Pilot and expanded held-out accuracy](results/pilot_expanded_accuracy_comparison.png)
 
 ## Limitations
 

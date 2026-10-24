@@ -1,0 +1,14 @@
+actual_identity,predicted_identity,error_count
+Gerhard Schroeder,Tony Blair,6
+Donald Rumsfeld,George W Bush,4
+Colin Powell,Tony Blair,3
+Tony Blair,Gerhard Schroeder,3
+Colin Powell,Gerhard Schroeder,2
+Donald Rumsfeld,Colin Powell,2
+Donald Rumsfeld,Tony Blair,2
+George W Bush,Donald Rumsfeld,2
+George W Bush,Gerhard Schroeder,2
+Gerhard Schroeder,George W Bush,2
+Donald Rumsfeld,Gerhard Schroeder,1
+George W Bush,Colin Powell,1
+Tony Blair,George W Bush,1

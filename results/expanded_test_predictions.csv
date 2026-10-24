@@ -1,0 +1,111 @@
+source_index,actual_label,actual_identity,predicted_label,predicted_identity,confidence,correct
+1961,0,George W Bush,3,Donald Rumsfeld,0.26870458735919284,False
+2001,0,George W Bush,0,George W Bush,0.4032054716828315,True
+2322,0,George W Bush,0,George W Bush,0.28401410196282567,True
+2377,0,George W Bush,0,George W Bush,0.3301319979163581,True
+2589,0,George W Bush,0,George W Bush,0.47341739607043926,True
+3234,0,George W Bush,0,George W Bush,0.4932793551701872,True
+3591,0,George W Bush,4,Gerhard Schroeder,0.326390743182134,False
+4770,0,George W Bush,0,George W Bush,0.7976386253204759,True
+5065,0,George W Bush,0,George W Bush,0.4071108581813747,True
+5104,0,George W Bush,3,Donald Rumsfeld,0.4685718208248331,False
+5327,0,George W Bush,0,George W Bush,0.7411028227906318,True
+5662,0,George W Bush,0,George W Bush,0.6823215703413807,True
+5904,0,George W Bush,0,George W Bush,0.5984724463105274,True
+5992,0,George W Bush,0,George W Bush,0.4829847036063746,True
+6303,0,George W Bush,0,George W Bush,0.39358576810189644,True
+7683,0,George W Bush,1,Colin Powell,0.4676804756574374,False
+7917,0,George W Bush,0,George W Bush,0.8056506383840822,True
+8578,0,George W Bush,0,George W Bush,0.47862974378523476,True
+9729,0,George W Bush,0,George W Bush,0.8047720361356538,True
+11053,0,George W Bush,4,Gerhard Schroeder,0.28915070385882663,False
+12176,0,George W Bush,0,George W Bush,0.34847713802946334,True
+12891,0,George W Bush,0,George W Bush,0.26558542361096515,True
+300,1,Colin Powell,1,Colin Powell,0.4946024374965783,True
+1024,1,Colin Powell,1,Colin Powell,0.542243338402653,True
+1531,1,Colin Powell,1,Colin Powell,0.3331576303673666,True
+1582,1,Colin Powell,1,Colin Powell,0.6043844025476128,True
+2861,1,Colin Powell,1,Colin Powell,0.8095039677238703,True
+3133,1,Colin Powell,1,Colin Powell,0.40778179028093436,True
+3642,1,Colin Powell,1,Colin Powell,0.48156586209195357,True
+4035,1,Colin Powell,2,Tony Blair,0.3304441765970498,False
+4347,1,Colin Powell,1,Colin Powell,0.5381196620443935,True
+4426,1,Colin Powell,2,Tony Blair,0.4042496800967934,False
+5695,1,Colin Powell,4,Gerhard Schroeder,0.3376060594953398,False
+5838,1,Colin Powell,1,Colin Powell,0.3406617600456637,True
+6831,1,Colin Powell,1,Colin Powell,0.5433360414545085,True
+6986,1,Colin Powell,1,Colin Powell,0.6668858280796007,True
+8368,1,Colin Powell,1,Colin Powell,0.4735496359491974,True
+9358,1,Colin Powell,4,Gerhard Schroeder,0.34939373404560037,False
+9377,1,Colin Powell,1,Colin Powell,0.40199839864766623,True
+10240,1,Colin Powell,1,Colin Powell,0.35234117514479424,True
+10309,1,Colin Powell,1,Colin Powell,0.6828251397079191,True
+10638,1,Colin Powell,1,Colin Powell,0.5308889800792035,True
+12245,1,Colin Powell,2,Tony Blair,0.3218751396068746,False
+12894,1,Colin Powell,1,Colin Powell,0.6143673700129785,True
+460,2,Tony Blair,2,Tony Blair,0.41513850047381184,True
+824,2,Tony Blair,2,Tony Blair,0.4053229233654579,True
+1331,2,Tony Blair,2,Tony Blair,0.4722273097287949,True
+2201,2,Tony Blair,2,Tony Blair,0.4171157671754688,True
+3054,2,Tony Blair,2,Tony Blair,0.41498347173892847,True
+4061,2,Tony Blair,2,Tony Blair,0.42040808805160274,True
+4186,2,Tony Blair,2,Tony Blair,0.3384746001367029,True
+4422,2,Tony Blair,0,George W Bush,0.39486038575457866,False
+4720,2,Tony Blair,4,Gerhard Schroeder,0.3357414267699151,False
+4812,2,Tony Blair,2,Tony Blair,0.41262811253335396,True
+5163,2,Tony Blair,2,Tony Blair,0.7475624558945559,True
+5196,2,Tony Blair,2,Tony Blair,0.4887858980998026,True
+5393,2,Tony Blair,4,Gerhard Schroeder,0.4015149768860204,False
+6773,2,Tony Blair,2,Tony Blair,0.42969647068067934,True
+9475,2,Tony Blair,2,Tony Blair,0.46577417440996205,True
+9660,2,Tony Blair,2,Tony Blair,0.4791170210004894,True
+10217,2,Tony Blair,2,Tony Blair,0.4738515535359489,True
+10314,2,Tony Blair,2,Tony Blair,0.6693179717222791,True
+11011,2,Tony Blair,2,Tony Blair,0.5391126030378183,True
+11705,2,Tony Blair,2,Tony Blair,0.5544899290344716,True
+12196,2,Tony Blair,2,Tony Blair,0.4660388048267673,True
+12446,2,Tony Blair,4,Gerhard Schroeder,0.3396810114249411,False
+182,3,Donald Rumsfeld,3,Donald Rumsfeld,0.6258577877097927,True
+362,3,Donald Rumsfeld,0,George W Bush,0.3310772866804482,False
+370,3,Donald Rumsfeld,1,Colin Powell,0.2699614658216858,False
+836,3,Donald Rumsfeld,3,Donald Rumsfeld,0.33420359666184163,True
+1118,3,Donald Rumsfeld,3,Donald Rumsfeld,0.617271529047307,True
+2642,3,Donald Rumsfeld,3,Donald Rumsfeld,0.41388141425116265,True
+3236,3,Donald Rumsfeld,3,Donald Rumsfeld,0.7479171075441855,True
+3568,3,Donald Rumsfeld,3,Donald Rumsfeld,0.3603079356767489,True
+3953,3,Donald Rumsfeld,3,Donald Rumsfeld,0.4861696258911383,True
+4639,3,Donald Rumsfeld,0,George W Bush,0.269715798429958,False
+4676,3,Donald Rumsfeld,0,George W Bush,0.33763097518610136,False
+5017,3,Donald Rumsfeld,2,Tony Blair,0.2746623282177737,False
+7318,3,Donald Rumsfeld,3,Donald Rumsfeld,0.472741601878919,True
+8107,3,Donald Rumsfeld,1,Colin Powell,0.4609015490427323,False
+8144,3,Donald Rumsfeld,3,Donald Rumsfeld,0.4618645695219057,True
+8424,3,Donald Rumsfeld,3,Donald Rumsfeld,0.3369222010208485,True
+8968,3,Donald Rumsfeld,3,Donald Rumsfeld,0.39387212939927085,True
+10292,3,Donald Rumsfeld,3,Donald Rumsfeld,0.34125868158275996,True
+10808,3,Donald Rumsfeld,2,Tony Blair,0.4005224478188254,False
+10907,3,Donald Rumsfeld,0,George W Bush,0.2869677354144463,False
+11342,3,Donald Rumsfeld,4,Gerhard Schroeder,0.46300787785001163,False
+11929,3,Donald Rumsfeld,3,Donald Rumsfeld,0.330747738812072,True
+521,4,Gerhard Schroeder,2,Tony Blair,0.5354070209331991,False
+1192,4,Gerhard Schroeder,4,Gerhard Schroeder,0.3987140246011519,True
+2135,4,Gerhard Schroeder,0,George W Bush,0.551517593129256,False
+2433,4,Gerhard Schroeder,4,Gerhard Schroeder,0.3312336253962156,True
+2973,4,Gerhard Schroeder,4,Gerhard Schroeder,0.3310311622570154,True
+3286,4,Gerhard Schroeder,4,Gerhard Schroeder,0.33207091446668263,True
+3991,4,Gerhard Schroeder,4,Gerhard Schroeder,0.47452009673664225,True
+4695,4,Gerhard Schroeder,4,Gerhard Schroeder,0.4241161823239868,True
+5028,4,Gerhard Schroeder,4,Gerhard Schroeder,0.27189503541087956,True
+5155,4,Gerhard Schroeder,4,Gerhard Schroeder,0.407687766115987,True
+6060,4,Gerhard Schroeder,4,Gerhard Schroeder,0.6839448096340318,True
+6219,4,Gerhard Schroeder,4,Gerhard Schroeder,0.6175277846442297,True
+7167,4,Gerhard Schroeder,4,Gerhard Schroeder,0.5469609087936824,True
+7733,4,Gerhard Schroeder,4,Gerhard Schroeder,0.40531965655916063,True
+8027,4,Gerhard Schroeder,2,Tony Blair,0.3983536711614506,False
+8388,4,Gerhard Schroeder,2,Tony Blair,0.26577168241550764,False
+9242,4,Gerhard Schroeder,2,Tony Blair,0.3342061780897259,False
+9252,4,Gerhard Schroeder,2,Tony Blair,0.2709825129211463,False
+10580,4,Gerhard Schroeder,4,Gerhard Schroeder,0.5266718447605321,True
+11415,4,Gerhard Schroeder,0,George W Bush,0.3313538150326289,False
+11785,4,Gerhard Schroeder,4,Gerhard Schroeder,0.3291994956919897,True
+11860,4,Gerhard Schroeder,2,Tony Blair,0.34878667048135215,False
