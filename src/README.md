@@ -1,4 +1,4 @@
 # Source Directory
 
-The Jupyter Notebook will be the primary assignment implementation. Reusable functions may later be moved into this directory if doing so improves clarity without duplicating the notebook's logic.
+The Jupyter Notebook is the primary project implementation. No separate source module is required at present because the complete, documented pipeline is contained in `face_identification.ipynb`.
 

@@ -3,6 +3,7 @@ pandas
 matplotlib
 scikit-learn
 ipykernel
+notebook
 nbclient
 nbformat
 joblib

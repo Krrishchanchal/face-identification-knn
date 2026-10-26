@@ -39,7 +39,7 @@ k-NN classification
 Evaluation and error analysis
 ```
 
-The planned workflow is:
+The implemented workflow is:
 
 1. Load LFW through Scikit-learn.
 2. Select five identities with sufficient images.
@@ -94,7 +94,7 @@ The planned workflow is:
     `-- README.md
 ```
 
-The notebook will contain the complete exploratory and experimental workflow. Reusable functions may also be placed in `src/` as the implementation develops.
+The notebook contains the complete exploratory and experimental workflow. The `src/` directory documents why no separate source module is currently necessary.
 
 ## Installation
 
@@ -186,7 +186,7 @@ The leading Eigenfaces visualise the strongest directions of variation learned f
 
 ![Leading Eigenfaces](results/eigenfaces.png)
 
-The 100-component setting is exploratory. The final PCA component count will be selected together with the k-NN parameters using cross-validation confined to the training set.
+The 100-component setting is exploratory. The final PCA component count was selected together with the k-NN parameters using cross-validation confined to the training set.
 
 ### Training-Only Model Selection
 
@@ -231,7 +231,7 @@ The most frequent directed error is Tony Blair predicted as Colin Powell, occurr
 
 ![Correct and incorrect test predictions](results/sample_predictions.png)
 
-The pilot test results were not used to retune that experiment. The next experiment will expand the balanced dataset from 50 to 109 images per identity, matching the complete image count of the least represented selected identity. Its final test images will be selected only from images that were never used in this pilot, so the expanded experiment retains a genuinely unseen evaluation set.
+The pilot test results were not used to retune that experiment. The subsequent experiment expanded the balanced dataset from 50 to 109 images per identity, matching the complete image count of the least represented selected identity. Its final test images were selected only from images that were never used in the pilot, so the expanded experiment retained a genuinely unseen evaluation set.
 
 ### Transition to the Expanded Experiment
 
@@ -303,4 +303,9 @@ Performance may also be affected by changes in pose, facial expression, illumina
 
 ## References
 
-Dataset and methodology references will be added as the implementation is completed.
+1. G. B. Huang, M. Ramesh, T. Berg, and E. Learned-Miller, “Labeled Faces in the Wild: A Database for Studying Face Recognition in Unconstrained Environments,” University of Massachusetts Amherst, Technical Report 07-49, 2007. [LFW project and technical report](https://vis-www.cs.umass.edu/lfw/)
+2. M. Turk and A. Pentland, “Eigenfaces for Recognition,” *Journal of Cognitive Neuroscience*, vol. 3, no. 1, pp. 71–86, 1991. [DOI: 10.1162/jocn.1991.3.1.71](https://doi.org/10.1162/jocn.1991.3.1.71)
+3. T. M. Cover and P. E. Hart, “Nearest Neighbor Pattern Classification,” *IEEE Transactions on Information Theory*, vol. 13, no. 1, pp. 21–27, 1967. [DOI: 10.1109/TIT.1967.1053964](https://doi.org/10.1109/TIT.1967.1053964)
+4. Scikit-learn developers, [`fetch_lfw_people` documentation](https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_lfw_people.html).
+5. Scikit-learn developers, [`PCA` documentation](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html).
+6. Scikit-learn developers, [`KNeighborsClassifier` documentation](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html).
